@@ -7,8 +7,6 @@ import io.github.hexagonnico.undergroundjungle.items.ModAxeItem;
 import io.github.hexagonnico.undergroundjungle.items.ModHoeItem;
 import io.github.hexagonnico.undergroundjungle.items.ModPickaxeItem;
 import io.github.hexagonnico.undergroundjungle.items.ModToolTier;
-import io.github.phantomloader.library.ModEntryPoint;
-import io.github.phantomloader.library.registry.ModRegistry;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.*;
@@ -17,14 +15,17 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 
+import java.util.ServiceLoader;
 import java.util.function.Supplier;
 
 public final class UndergroundJungle {
 
-    private static final ModRegistry REGISTRY = ModRegistry.instantiate("underground_jungle");
+    public static final String MOD_ID = "underground_jungle";
+
+    private static final ModRegistry REGISTRY = ServiceLoader.load(ModRegistry.class).findFirst().orElseThrow();
 
     public static final Supplier<MudGrassBlock> JUNGLE_GRASS = REGISTRY.registerBlockAndItem("jungle_grass", () -> new MudGrassBlock(BlockBehaviour.Properties.copy(Blocks.MUD).mapColor(MapColor.GRASS).sound(SoundType.GRASS).randomTicks()));
-    public static final Supplier<Block> TEMPLE_BRICKS = REGISTRY.registerBlockAndItem("temple_bricks", () -> new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.TERRACOTTA_BROWN).sound(SoundType.STONE).strength(30.0f, 1200.0f)));
+    public static final Supplier<Block> TEMPLE_BRICKS = REGISTRY.registerBlockAndItem("temple_bricks", BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.TERRACOTTA_BROWN).sound(SoundType.STONE).strength(30.0f, 1200.0f));
     public static final Supplier<Block> CRACKED_TEMPLE_BRICKS = REGISTRY.registerBlockVariantAndItem("cracked_temple_bricks", TEMPLE_BRICKS);
     public static final Supplier<Block> MOSSY_TEMPLE_BRICKS = REGISTRY.registerBlockVariantAndItem("mossy_temple_bricks", TEMPLE_BRICKS);
     public static final Supplier<Block> CHISELED_TEMPLE_BRICKS = REGISTRY.registerBlockVariantAndItem("chiseled_temple_bricks", TEMPLE_BRICKS);
@@ -55,12 +56,7 @@ public final class UndergroundJungle {
     public static final Supplier<SpawnEggItem> JUNGLE_ZOMBIE_SPAWN_EGG = REGISTRY.registerSpawnEgg("jungle_zombie_spawn_egg", JUNGLE_ZOMBIE::get, 44975, 9945732);
     public static final Supplier<SpawnEggItem> MOSSY_SKELETON_SPAWN_EGG = REGISTRY.registerSpawnEgg("mossy_skeleton_spawn_egg", MOSSY_SKELETON::get, 12698049, 7969893);
 
-    public static String modId() {
-        return REGISTRY.mod;
-    }
-
-    @ModEntryPoint
-    public static void register() {
+    public static void init() {
         REGISTRY.register();
     }
 }
