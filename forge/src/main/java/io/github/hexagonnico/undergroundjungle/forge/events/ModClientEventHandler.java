@@ -43,6 +43,7 @@ public class ModClientEventHandler {
         } else if(event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
             event.accept(UndergroundJungle.TEMPLE_SWORD);
             event.accept(UndergroundJungle.TEMPLE_AXE);
+            event.accept(UndergroundJungle.BLADE_OF_THE_JUNGLE);
         } else if(event.getTabKey().equals(CreativeModeTabs.INGREDIENTS)) {
             event.accept(UndergroundJungle.JUNGLE_SPORES);
         } else if(event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)) {

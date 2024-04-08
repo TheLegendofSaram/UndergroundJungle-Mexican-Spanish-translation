@@ -26,5 +26,8 @@
   "entity.underground_jungle.mossy_skeleton": "Mossy Skeleton",
   "entity.underground_jungle.jungle_zombie": "Jungle Zombie",
   "item.underground_jungle.axe_of_regrowth": "Axe of Regrowth",
-  "item.underground_jungle.jungle_spores": "Jungle Spores"
+  "item.underground_jungle.jungle_spores": "Jungle Spores",
+  "description.underground_jungle.axe_of_regrowth": "Plants saplings when cutting down trees",
+  "item.underground_jungle.blade_of_the_jungle": "Blade of the Jungle",
+  "description.underground_jungle.blade_of_the_jungle": "Has a small chance to inflict poison"
 }

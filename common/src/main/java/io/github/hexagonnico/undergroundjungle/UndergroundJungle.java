@@ -46,6 +46,7 @@ public final class UndergroundJungle {
     public static final Supplier<ModAxeItem> TEMPLE_AXE = REGISTRY.registerItem("temple_axe", () -> new ModAxeItem(ModToolTier.TEMPLE, 5.0f, -3.0f, new Item.Properties()));
     public static final Supplier<ModHoeItem> TEMPLE_HOE = REGISTRY.registerItem("temple_hoe", () -> new ModHoeItem(ModToolTier.TEMPLE, -3, 0.0f, new Item.Properties()));
     public static final Supplier<AxeOfRegrowthItem> AXE_OF_REGROWTH = REGISTRY.registerItem("axe_of_regrowth", () -> new AxeOfRegrowthItem(ModToolTier.JUNGLE, 5.0f, -3.0f, new Item.Properties()));
+    public static final Supplier<ModSwordItem> BLADE_OF_THE_JUNGLE = REGISTRY.registerItem("blade_of_the_jungle", () -> new ModSwordItem(ModToolTier.JUNGLE, 3, -2.4f, new Item.Properties()));
 
     public static final Supplier<BlockEntityType<TempleChestBlockEntity>> TEMPLE_CHEST_ENTITY = REGISTRY.registerBlockEntity("temple_chest", TempleChestBlockEntity::new, TEMPLE_CHEST);
 

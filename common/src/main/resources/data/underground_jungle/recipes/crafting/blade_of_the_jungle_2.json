@@ -3,12 +3,12 @@
   "category": "building",
   "key": {
     "X": {
-      "item": "underground_jungle:temple_axe"
-    },
-    "A": {
-      "item": "underground_jungle:jungle_vines"
+      "item": "underground_jungle:temple_sword"
     },
     "B": {
+      "item": "underground_jungle:jungle_vines"
+    },
+    "A": {
       "item": "underground_jungle:jungle_spores"
     }
   },
@@ -18,8 +18,8 @@
     "ABA"
   ],
   "result": {
-    "item": "underground_jungle:axe_of_regrowth"
+    "item": "underground_jungle:blade_of_the_jungle"
   },
-  "group": "axe_of_regrowth",
+  "group": "blade_of_the_jungle",
   "show_notification": true
 }
