@@ -39,9 +39,12 @@ public class ModClientEventHandler {
             event.accept(UndergroundJungle.TEMPLE_PICKAXE);
             event.accept(UndergroundJungle.TEMPLE_AXE);
             event.accept(UndergroundJungle.TEMPLE_HOE);
+            event.accept(UndergroundJungle.AXE_OF_REGROWTH);
         } else if(event.getTabKey().equals(CreativeModeTabs.COMBAT)) {
             event.accept(UndergroundJungle.TEMPLE_SWORD);
             event.accept(UndergroundJungle.TEMPLE_AXE);
+        } else if(event.getTabKey().equals(CreativeModeTabs.INGREDIENTS)) {
+            event.accept(UndergroundJungle.JUNGLE_SPORES);
         } else if(event.getTabKey().equals(CreativeModeTabs.SPAWN_EGGS)) {
             event.accept(UndergroundJungle.MOSSY_SKELETON_SPAWN_EGG);
             event.accept(UndergroundJungle.JUNGLE_ZOMBIE_SPAWN_EGG);

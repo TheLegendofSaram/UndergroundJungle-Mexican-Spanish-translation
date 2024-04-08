@@ -24,5 +24,7 @@
   "item.underground_jungle.mossy_skeleton_spawn_egg": "Mossy Skeleton Spawn Egg",
   "item.underground_jungle.jungle_zombie_spawn_egg": "Jungle Zombie Spawn Egg",
   "entity.underground_jungle.mossy_skeleton": "Mossy Skeleton",
-  "entity.underground_jungle.jungle_zombie": "Jungle Zombie"
+  "entity.underground_jungle.jungle_zombie": "Jungle Zombie",
+  "item.underground_jungle.axe_of_regrowth": "Axe of Regrowth",
+  "item.underground_jungle.jungle_spores": "Jungle Spores"
 }

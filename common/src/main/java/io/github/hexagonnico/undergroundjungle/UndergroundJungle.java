@@ -3,10 +3,7 @@ package io.github.hexagonnico.undergroundjungle;
 import io.github.hexagonnico.undergroundjungle.blocks.*;
 import io.github.hexagonnico.undergroundjungle.entities.JungleZombie;
 import io.github.hexagonnico.undergroundjungle.entities.MossySkeleton;
-import io.github.hexagonnico.undergroundjungle.items.ModAxeItem;
-import io.github.hexagonnico.undergroundjungle.items.ModHoeItem;
-import io.github.hexagonnico.undergroundjungle.items.ModPickaxeItem;
-import io.github.hexagonnico.undergroundjungle.items.ModToolTier;
+import io.github.hexagonnico.undergroundjungle.items.*;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.*;
@@ -41,12 +38,14 @@ public final class UndergroundJungle {
     public static final Supplier<JungleVinesPlantBlock> JUNGLE_VINES_PLANT = REGISTRY.registerBlock("jungle_vines_plant", () -> new JungleVinesPlantBlock(BlockBehaviour.Properties.copy(JUNGLE_VINES.get()).lightLevel(JungleVinesPlantBlock.lightLevel(8))));
 
     public static final Supplier<Item> TEMPLE_KEY = REGISTRY.registerItem("temple_key", new Item.Properties().stacksTo(1));
+    public static final Supplier<Item> JUNGLE_SPORES = REGISTRY.registerItem("jungle_spores");
 
     public static final Supplier<SwordItem> TEMPLE_SWORD = REGISTRY.registerItem("temple_sword", () -> new SwordItem(ModToolTier.TEMPLE, 3, -2.4f, new Item.Properties()));
     public static final Supplier<ShovelItem> TEMPLE_SHOVEL = REGISTRY.registerItem("temple_shovel", () -> new ShovelItem(ModToolTier.TEMPLE, 1.5f, -3.0f, new Item.Properties()));
-    public static final Supplier<PickaxeItem> TEMPLE_PICKAXE = REGISTRY.registerItem("temple_pickaxe", () -> new ModPickaxeItem(ModToolTier.TEMPLE, 1, -2.8f, new Item.Properties()));
-    public static final Supplier<AxeItem> TEMPLE_AXE = REGISTRY.registerItem("temple_axe", () -> new ModAxeItem(ModToolTier.TEMPLE, 5.0f, -3.0f, new Item.Properties()));
-    public static final Supplier<HoeItem> TEMPLE_HOE = REGISTRY.registerItem("temple_hoe", () -> new ModHoeItem(ModToolTier.TEMPLE, -3, 0.0f, new Item.Properties()));
+    public static final Supplier<ModPickaxeItem> TEMPLE_PICKAXE = REGISTRY.registerItem("temple_pickaxe", () -> new ModPickaxeItem(ModToolTier.TEMPLE, 1, -2.8f, new Item.Properties()));
+    public static final Supplier<ModAxeItem> TEMPLE_AXE = REGISTRY.registerItem("temple_axe", () -> new ModAxeItem(ModToolTier.TEMPLE, 5.0f, -3.0f, new Item.Properties()));
+    public static final Supplier<ModHoeItem> TEMPLE_HOE = REGISTRY.registerItem("temple_hoe", () -> new ModHoeItem(ModToolTier.TEMPLE, -3, 0.0f, new Item.Properties()));
+    public static final Supplier<AxeOfRegrowthItem> AXE_OF_REGROWTH = REGISTRY.registerItem("axe_of_regrowth", () -> new AxeOfRegrowthItem(ModToolTier.JUNGLE, 5.0f, -3.0f, new Item.Properties()));
 
     public static final Supplier<BlockEntityType<TempleChestBlockEntity>> TEMPLE_CHEST_ENTITY = REGISTRY.registerBlockEntity("temple_chest", TempleChestBlockEntity::new, TEMPLE_CHEST);
 

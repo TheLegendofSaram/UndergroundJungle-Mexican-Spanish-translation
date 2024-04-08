@@ -25,6 +25,10 @@ public interface ModRegistry {
         return this.registerItem(name, () -> new Item(properties));
     }
 
+    default Supplier<Item> registerItem(String name) {
+        return this.registerItem(name, new Item.Properties());
+    }
+
     <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> supplier);
 
     default Supplier<BlockItem> registerBlockItem(String name, Supplier<? extends Block> block) {

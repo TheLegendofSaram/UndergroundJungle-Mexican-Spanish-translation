@@ -38,8 +38,10 @@ public class FabricClientInitializer implements ClientModInitializer {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(listener -> listener.accept(UndergroundJungle.TEMPLE_PICKAXE.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(listener -> listener.accept(UndergroundJungle.TEMPLE_AXE.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(listener -> listener.accept(UndergroundJungle.TEMPLE_HOE.get()));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(listener -> listener.accept(UndergroundJungle.AXE_OF_REGROWTH.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(listener -> listener.accept(UndergroundJungle.TEMPLE_SWORD.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(listener -> listener.accept(UndergroundJungle.TEMPLE_AXE.get()));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(listener -> listener.accept(UndergroundJungle.JUNGLE_SPORES.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(listener -> listener.accept(UndergroundJungle.MOSSY_SKELETON_SPAWN_EGG.get()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(listener -> listener.accept(UndergroundJungle.JUNGLE_ZOMBIE_SPAWN_EGG.get()));
         BlockEntityRenderers.register(UndergroundJungle.TEMPLE_CHEST_ENTITY.get(), ChestRenderer::new);
