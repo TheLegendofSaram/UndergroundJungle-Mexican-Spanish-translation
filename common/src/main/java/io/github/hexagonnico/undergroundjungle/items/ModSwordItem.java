@@ -14,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.Random;
 
 public class ModSwordItem extends SwordItem {
 
@@ -28,10 +27,9 @@ public class ModSwordItem extends SwordItem {
         super.appendHoverText(item, world, tooltip, flag);
     }
 
-
     @Override
     public boolean hurtEnemy(@NotNull ItemStack item, @NotNull LivingEntity target, @NotNull LivingEntity player) {
-        if(new Random().nextFloat() < 0.1f) {
+        if(player.level().getRandom().nextFloat() < 0.1f) {
             target.addEffect(new MobEffectInstance(MobEffects.POISON, 240, 0));
         }
         return super.hurtEnemy(item, target, player);
