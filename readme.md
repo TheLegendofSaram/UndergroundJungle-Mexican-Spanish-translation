@@ -26,6 +26,8 @@ Curseforge: https://www.curseforge.com/minecraft/mc-mods/underground-jungle
 
 Modrinth: https://modrinth.com/mod/underground-jungle
 
+If you find this mod on other distribution platforms, these are NOT managed by me.
+
 ### Additional information
 
 The Fabric version of this mod requires the [Fabric API](https://github.com/FabricMC)
