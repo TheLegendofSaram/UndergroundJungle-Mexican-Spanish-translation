@@ -1,4 +1,10 @@
-# Release 20.1.1
+# Patch 20.1.3
+
+Fixes:
+
+* Fixed crash due to wrongly configured music in the biome
+
+# Release 20.1.2
 
 Changes:
 
